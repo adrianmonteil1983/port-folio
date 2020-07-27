@@ -1,26 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState} from 'react';
+import Introduction from './components/Introduction';
+import Footer from './components/Footer';
 import './App.css';
+import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import Project from './components/Project';
+import SideBar from './components/SideBar';
+
+
 
 function App() {
+  let [section, setSection] = useState(0);
+
+  const fade = (e) => {
+    console.log(e.deltaY)
+    if(section === 5 || section < 0){
+      setSection(section = 0)
+    }else if(e.deltaY > 0){
+      setSection(section = section +1)
+    }else if(e.deltaY < 0){
+      setSection(section = section -1)
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='main-container' onWheel={(e) => fade(e)} >
+      <h2 onClick={() => setSection(section = 0)}>Adrian Monteil</h2>
+      {(section !== 5) 
+        ?<SideBar/>
+        :null
+      } 
+      <SwitchTransition>
+          <CSSTransition key={section} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)} classNames="fade">
+            {
+              (() => {
+                if(section === 5 ){
+                  return <Footer/>
+                }else if(section > 0 && section < 5) {
+                  return <Project page={section -1}/>
+                }else{
+                  return <Introduction/>
+                }
+              })()
+            }
+          </CSSTransition>
+        </SwitchTransition>  
     </div>
-  );
+   
+  )
 }
 
 export default App;

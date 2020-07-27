@@ -1,0 +1,36 @@
+#introduction{
+  height: 100%;
+  background-color: #7fb0a6;
+}
+#introduction h1{
+  margin:0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  word-spacing: 2vw;
+}
+#introduction h1:before{
+  content: 'DEVELOPER';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+  line-height: 0.865em;
+  background: linear-gradient(0deg, aliceblue 0, transparent 80%);
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0,5;
+}
+#intruction button{
+  border-radius: 5%;
+  border: 1px aliceblue solid;
+  font-family: Ralleway;
+  outline: none;
+}
+#introduction a{
+  text-decoration: none;
+  color: aliceblue;
+  outline: none;
+}

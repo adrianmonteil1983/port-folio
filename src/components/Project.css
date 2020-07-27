@@ -1,0 +1,108 @@
+@keyframes move-left{
+  from {right: -50px}
+  to {right: 0px}
+}
+#containerProject h1{
+  position: relative;
+  animation-name: move-left;
+  animation-duration: 1s;
+}
+@keyframes move-up{
+  from {bottom: -50px}
+  to {bottom: 0px}
+}
+a{
+  position: relative;
+  animation: move-up 1s;
+}
+button{
+  font-family: Ralleway;
+  color: aliceblue;
+  height: 4vh;
+  border-radius: 5px;
+  background-color: #7fb0a6;
+  position: absolute;
+  left: 45%;
+  top: 20%;
+}
+#containerProject{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3/4fr 1/4fr;
+  place-items: center;
+  
+}
+@keyframes move-right{
+  from {left: -50px}
+  to {left: 0px}
+}
+#picture{
+  height: 40vh;
+  width: 30vw;
+  border-radius: 5%;
+  position: relative;
+  animation-name: move-right;
+  animation-duration: 1s;
+  background: attr(picture);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow:20px 15px 10px grey;
+}
+#picture:hover{
+  cursor: pointer;
+}
+#picture::before{
+  text-align: center;
+  content: attr(text);
+  border-radius: 5% 5% 0% 0%;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  filter: grayscale(100%);
+  background-color: rgb(14, 14, 53);
+  color: white;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+  z-index: 1;
+}
+#picture:hover::before{
+  opacity: 0.8;
+  height: 50%;
+}
+#picture::after{
+  text-align: center;
+  content: '';
+  border-radius: 0% 0% 5% 5%;
+  width: 100%;
+  height: 0%;
+  bottom: 0px;
+  position: absolute;
+  filter: grayscale(100%);
+  background-color: rgb(14, 14, 53);
+  color: white;
+  opacity: 0;
+  transition: all ease-in-out 1s;
+}
+#picture:hover::after{
+  opacity: 0.8;
+  height: 50%;
+}
+#picture img{
+  height: 100%;
+  width: 100%;
+  border-radius: 5%;
+  position: absolute;
+  z-index: 0;
+}
+#github{
+  border-radius: 50%;
+  padding-right: 40px;
+  justify-self: end;
+}
+#link{
+  padding-left: 40px;
+  justify-self: start;
+}
+

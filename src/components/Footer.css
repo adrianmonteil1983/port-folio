@@ -1,0 +1,21 @@
+#footer{
+  height: 100%;
+  background-color:rgb(65, 71, 70);
+  
+}
+#icons{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-items: center;
+}
+li{
+  list-style: none;
+  color: aliceblue;
+  margin-left: 10px;
+}
+li:hover{
+  cursor: pointer;
+}

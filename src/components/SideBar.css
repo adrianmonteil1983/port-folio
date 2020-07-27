@@ -1,0 +1,9 @@
+#sidebar-container{
+  position: absolute;
+  right: 1px;
+  top: 35%;
+}
+#sidebar-container ul{
+  display: flex;
+  flex-direction: column; 
+}
