@@ -45,7 +45,6 @@ function App() {
         </SwitchTransition>
         <div id='mousse' className='rolling'>
           <img src="https://img.icons8.com/ios/30/000000/generic-mouse.png" alt='mousse'/>
-          
         </div>
         <p id="page">{section+1}/6</p>
     </div>
