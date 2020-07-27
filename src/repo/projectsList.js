@@ -17,7 +17,7 @@ const projectsList = [
     picture: resume,
     technos: 'React, React Transition Group, Grid',
     github:'https://github.com/adrianmonteil1983/port-folio',
-    website:'https://5f1e4c86b92e3aba00c7821b--sad-liskov-3bed62.netlify.app'
+    website:'https://sad-liskov-3bed62.netlify.app'
   },
   {
     name: 'Face Recognition',
