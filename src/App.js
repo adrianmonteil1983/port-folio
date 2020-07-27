@@ -13,7 +13,7 @@ function App() {
 
   const fade = (e) => {
     console.log(e.deltaY)
-    if(section === 5 || section < 0){
+    if(section === 6 || section < 0){
       setSection(section = 0)
     }else if(e.deltaY > 0){
       setSection(section = section +1)
@@ -22,9 +22,9 @@ function App() {
     }
   }
   return (
-    <div id='main-container' onWheel={(e) => fade(e)} >
+    <div id='main-container' onWheel={(e) => fade(e)}>
       <h2 onClick={() => setSection(section = 0)}>Adrian Monteil</h2>
-      {(section !== 5) 
+      {(section !== 6) 
         ?<SideBar/>
         :null
       } 
@@ -32,9 +32,9 @@ function App() {
           <CSSTransition key={section} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)} classNames="fade">
             {
               (() => {
-                if(section === 5 ){
+                if(section === 6 ){
                   return <Footer/>
-                }else if(section > 0 && section < 5) {
+                }else if(section > 0 && section < 6) {
                   return <Project page={section -1}/>
                 }else{
                   return <Introduction/>
@@ -46,7 +46,7 @@ function App() {
         <div id='mousse' className='rolling'>
           <img src="https://img.icons8.com/ios/30/000000/generic-mouse.png" alt='mousse'/>
         </div>
-        <p id="page">{section+1}/6</p>
+        <p id="page">{section+1}/7</p>
     </div>
    
   )

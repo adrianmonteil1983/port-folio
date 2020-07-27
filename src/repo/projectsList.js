@@ -8,7 +8,7 @@ const projectsList = [
   {
     name: 'React Automation',
     picture: automation,
-    technos: 'React,Redux, Node, MQTT, Low level socket, MongoDB, API, Arduino',
+    technos: 'React,Redux, Node, MQTT, Low level socket, MongoDB, Rest API, Arduino',
     github:'https://github.com/adrianmonteil1983/react_automation_front',
     website:'https://practical-bell-ac50ec.netlify.app'
   },
@@ -22,21 +22,21 @@ const projectsList = [
   {
     name: 'Face Recognition',
     picture: recognition,
-    technos: 'React, Node, PostgreSQL, Heroku, API',
+    technos: 'React, Node, PostgreSQL, Heroku, Rest API',
     github:'https://github.com/adrianmonteil1983/facerecognitionbrain',
     website:'https://salty-beyond-55903.herokuapp.com/'
   },
   {
     name: 'Robots Friends',
     picture: robot,
-    technos: 'React, Redux, API, PWA',
+    technos: 'React, Redux, Rest API, PWA',
     github:'https://github.com/adrianmonteil1983/robotsfriend',
     website:'https://adrianmonteil1983.github.io/robotsfriend/'
   },
   {
     name: 'Vue Marvel',
     picture: marvel,
-    technos: 'Vue, Vuex, Vue Router, API',
+    technos: 'Vue, Vuex, Vue Router, Rest API',
     github:'https://github.com/adrianmonteil1983/marvel',
     website:'https://nervous-dubinsky-1f3a6d.netlify.app'
   }
