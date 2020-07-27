@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
-import Introduction from './components/Introduction';
-import Footer from './components/Footer';
+import Introduction from './components/introduction/Introduction';
+import Footer from './components/footer/Footer';
 import './App.css';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
-import Project from './components/Project';
-import SideBar from './components/SideBar';
+import Project from './components/project/Project';
+import SideBar from './components/sidebar/SideBar';
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Introduction.css';
-import resume from './adrian_monteil_fullstack.pdf';
+import resume from '../../repo/adrian_monteil_fullstack.pdf';
 
 const Introduction = () => {
   return (

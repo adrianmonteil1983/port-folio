@@ -1,6 +1,6 @@
 import React from 'react';
 import './Project.css';
-import projectsList from './projectsList';
+import projectsList from '../../repo/projectsList';
 
 const Project = ({page}) => {
   return (
