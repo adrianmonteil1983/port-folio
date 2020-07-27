@@ -23,11 +23,21 @@
   color: transparent;
   opacity: 0,5;
 }
-#intruction button{
+#container-button{
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  text-align: center;
+  transform: translate(-50% -50%);
   border-radius: 5%;
-  border: 1px aliceblue solid;
+}
+#container-button button{
   font-family: Ralleway;
-  outline: none;
+  color: aliceblue;
+  height: 4vh;
+  border-radius: 5px;
+  background-color: #7fb0a6;
+  border-radius: 5%;
 }
 #introduction a{
   text-decoration: none;

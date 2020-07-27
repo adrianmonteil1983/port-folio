@@ -5,7 +5,7 @@ import projectsList from '../../repo/projectsList';
 const Project = ({page}) => {
   return (
       <div id="containerProject">
-        <div id="picture" text={`technologies used: ${projectsList[page].technos}`} >
+        <div id="picture" text-top='technologies used: ' text-bottom={projectsList[page].technos} >
           <img src={projectsList[page].picture} alt='project'/>
         </div>
         <h1>{projectsList[page].name}</h1>

@@ -7,7 +7,7 @@ const projectsList = [
   {
     name: 'React Automation',
     picture: automation,
-    technos: 'React"&gtbr&lt",Redux, Node, MQTT, Low level socket, MongoDB, API, Arduino',
+    technos: 'React,Redux, Node, MQTT, Low level socket, MongoDB, API, Arduino',
     github:'https://github.com/adrianmonteil1983/react_automation_front',
     website:'https://practical-bell-ac50ec.netlify.app'
   },

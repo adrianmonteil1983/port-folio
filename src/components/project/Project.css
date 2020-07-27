@@ -15,16 +15,6 @@ a{
   position: relative;
   animation: move-up 1s;
 }
-button{
-  font-family: Ralleway;
-  color: aliceblue;
-  height: 4vh;
-  border-radius: 5px;
-  background-color: #7fb0a6;
-  position: absolute;
-  left: 45%;
-  top: 20%;
-}
 #containerProject{
   height: 100%;
   width: 100%;
@@ -55,14 +45,16 @@ button{
 }
 #picture::before{
   text-align: center;
-  content: attr(text);
+  content: attr(text-top);
+  font-family: Ralleway;
+  font-size: 2vw;
+  color: aliceblue;
   border-radius: 5% 5% 0% 0%;
   width: 100%;
   height: 0%;
   position: absolute;
   filter: grayscale(100%);
   background-color: rgb(14, 14, 53);
-  color: white;
   opacity: 0;
   transition: all ease-in-out 1s;
   z-index: 1;
@@ -73,7 +65,10 @@ button{
 }
 #picture::after{
   text-align: center;
-  content: '';
+  content: attr(text-bottom);
+  font-family: Ralleway;
+  font-size: 2vw;
+  color: aliceblue;
   border-radius: 0% 0% 5% 5%;
   width: 100%;
   height: 0%;
