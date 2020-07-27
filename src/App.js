@@ -13,12 +13,12 @@ function App() {
 
   const fade = (e) => {
     console.log(e.deltaY)
-    if(section === 6 || section < 0){
-      setSection(section = 0)
-    }else if(e.deltaY > 0){
+    if(e.deltaY > 0 && section < 6){
       setSection(section = section +1)
-    }else if(e.deltaY < 0){
+    }else if(e.deltaY < 0 && section > 0){
       setSection(section = section -1)
+    }else{
+      setSection(section = 0)
     }
   }
   return (
