@@ -38,6 +38,24 @@ h2:hover{
 #counter{
   position: absolute;
 }
+#mousse{
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+#page{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+@keyframes mousse-roll{
+  from{bottom: 6px}
+  to{bottom: 0px}
+}
+.rolling{
+  animation: mousse-roll 700ms ease-in infinite;
+}
 .bluerry{
   background-color: rgb(41, 38, 38) !important;
 }

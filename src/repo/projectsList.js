@@ -2,6 +2,7 @@ import automation from '../images/react_automation.png';
 import recognition from '../images/facerecognition.jpeg';
 import robot from '../images/robotfriends.png';
 import marvel from '../images/marvel.png';
+import resume from '../images/resume.png';
 
 const projectsList = [
   {
@@ -10,6 +11,13 @@ const projectsList = [
     technos: 'React,Redux, Node, MQTT, Low level socket, MongoDB, API, Arduino',
     github:'https://github.com/adrianmonteil1983/react_automation_front',
     website:'https://practical-bell-ac50ec.netlify.app'
+  },
+  {
+    name: 'Portfolio',
+    picture: resume,
+    technos: 'React, React Transition Group, Grid',
+    github:'https://github.com/adrianmonteil1983/port-folio',
+    website:'https://5f1e4c86b92e3aba00c7821b--sad-liskov-3bed62.netlify.app'
   },
   {
     name: 'Face Recognition',

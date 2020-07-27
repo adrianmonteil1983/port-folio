@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{ useState } from 'react';
 import Introduction from './components/introduction/Introduction';
 import Footer from './components/footer/Footer';
 import './App.css';
@@ -42,7 +42,12 @@ function App() {
               })()
             }
           </CSSTransition>
-        </SwitchTransition>  
+        </SwitchTransition>
+        <div id='mousse' className='rolling'>
+          <img src="https://img.icons8.com/ios/30/000000/generic-mouse.png" alt='mousse'/>
+          
+        </div>
+        <p id="page">{section+1}/6</p>
     </div>
    
   )
