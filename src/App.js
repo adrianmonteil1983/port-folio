@@ -10,9 +10,9 @@ import SideBar from './components/sidebar/SideBar';
 
 function App() {
   let [section, setSection] = useState(0);
+  let [slideY, setSlideY] = useState(0)
 
-  const fade = (e) => {
-    console.log(e.deltaY)
+  const route = (e) => {
     if(e.deltaY > 0 && section < 6){
       setSection(section = section +1)
     }else if(e.deltaY < 0 && section > 0){
@@ -21,13 +21,14 @@ function App() {
       setSection(section = 0)
     }
   }
+  const routePhone = () => {
+
+  }
+  
   return (
-    <div id='main-container' onWheel={(e) => fade(e)}>
+    <div id='main-container' onWheel={(e) => route(e)} onTouchStart={(e) => routePhone(e)}>
       <h2 onClick={() => setSection(section = 0)}>Adrian Monteil</h2>
-      {(section !== 6) 
-        ?<SideBar/>
-        :null
-      } 
+      <SideBar rolling={section === 6?true:false}/>
       <SwitchTransition>
           <CSSTransition key={section} addEndListener={(node, done) => node.addEventListener("transitionend", done, false)} classNames="fade">
             {
