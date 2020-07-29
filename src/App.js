@@ -10,7 +10,6 @@ import SideBar from './components/sidebar/SideBar';
 
 function App() {
   let [section, setSection] = useState(0);
-  let [slideY, setSlideY] = useState(0)
 
   const route = (e) => {
     if(e.deltaY > 0 && section < 6){

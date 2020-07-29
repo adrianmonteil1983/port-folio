@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import './SideBar.css'
 
 const SideBar = ({rolling}) => {
-  const roll = 'roll';
   useEffect(() => {
 
   })
