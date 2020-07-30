@@ -5,27 +5,24 @@ import './App.css';
 import { SwitchTransition, CSSTransition } from 'react-transition-group';
 import Project from './components/project/Project';
 import SideBar from './components/sidebar/SideBar';
-
-
+import route from './router/route';
 
 function App() {
   let [section, setSection] = useState(0);
-
-  const route = (e) => {
-    if(e.deltaY > 0 && section < 6){
-      setSection(section = section +1)
-    }else if(e.deltaY < 0 && section > 0){
-      setSection(section = section -1)
-    }else{
-      setSection(section = 0)
+  let wheelCounter = 0;
+  
+  const mousseRoll = (e) => {
+    let sectionNumber = 0;
+    wheelCounter = wheelCounter + e.deltaY;     
+    sectionNumber = route(wheelCounter, section);
+    if(sectionNumber !== -1){
+      setSection(section = sectionNumber)
+      wheelCounter = 0;
     }
-  }
-  const routePhone = () => {
-
   }
   
   return (
-    <div id='main-container' onWheel={(e) => route(e)} onTouchStart={(e) => routePhone(e)}>
+    <div id='main-container' onWheel={(e) => mousseRoll(e)}>
       <h2 onClick={() => setSection(section = 0)}>Adrian Monteil</h2>
       <SideBar rolling={section === 6?true:false}/>
       <SwitchTransition>
