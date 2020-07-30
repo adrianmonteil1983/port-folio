@@ -20,9 +20,17 @@ function App() {
       wheelCounter = 0;
     }
   }
+  const clickSection = () => {
+    if(section < 6){
+      console.log('next')
+      setSection(section = section +1)
+    }else{
+      setSection(section = 0)
+    } 
+  }
   
   return (
-    <div id='main-container' onWheel={(e) => mousseRoll(e)}>
+    <div id='main-container' onWheel={(e) => mousseRoll(e)} onClick={clickSection}>
       <h2 onClick={() => setSection(section = 0)}>Adrian Monteil</h2>
       <SideBar rolling={section === 6?true:false}/>
       <SwitchTransition>
